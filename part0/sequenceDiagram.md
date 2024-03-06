@@ -1,5 +1,3 @@
-
-
 ```mermaid
 sequenceDiagram
     participant browser
@@ -28,5 +26,8 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
-```
 
+    Note right of browser: The user writes a note in a textfield and submits it by clicking on the "Save" button and browser sends a POST request containing note data in the request body
+    browser->>server: POST ttps://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+```
