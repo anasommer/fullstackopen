@@ -38,5 +38,10 @@ sequenceDiagram
     server->>browser: HTTP 302 Status Code - redirect back to notes page
     activate browser
 
+ Note right of browser: Browser sends a GET request to /notes
 
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML document
+    deactivate server
 ```
