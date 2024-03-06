@@ -33,4 +33,10 @@ sequenceDiagram
 
         Note right of browser: The user writes a note in a textfield and submits it by clicking on the "Save" button and browser sends a POST request containing note data in the request body
 
+        Note left of server: The server adds the new note to the notes array.
+
+    server->>browser: HTTP 302 Status Code - redirect back to notes page
+    activate browser
+
+
 ```
